@@ -20,10 +20,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        spinner = findViewById(R.id.mealsList);
         price = findViewById(R.id.mealPrice);
 
-        Spinner spinner = (Spinner) findViewById(R.id.mealsList);
+        spinner = findViewById(R.id.mealsList);
         spinner.setOnItemSelectedListener(this);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                 R.array.meals, android.R.layout.simple_spinner_item);

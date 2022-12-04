@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">MealOrdering</string>
+    <string-array name="meals">
+        <item>Subway</item>
+        <item>Taco</item>
+        <item>Banana</item>
+        <item>Burger</item>
+        <item>Pizza</item>
+        <item>Orange</item>
+        <item>Fries</item>
+        <item>Apple</item>
+        <item>Papaya</item>
+        <item>Fries</item>
+    </string-array>
 </resources>

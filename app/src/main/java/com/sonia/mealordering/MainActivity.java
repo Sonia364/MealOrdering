@@ -6,13 +6,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.SeekBar;
 import android.widget.Spinner;
-import android.widget.Switch;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener, View.OnClickListener {
@@ -25,6 +26,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     RadioGroup radio_group;
     RadioButton  radioBtn;
     ImageView foodImg;
+    Button orderBtn;
+    CheckBox chk;
 
     int quantity = 1;
     final int TAX = 13;
@@ -40,6 +43,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         seekbar = findViewById(R.id.quantitySeekbar);
         radio_group = findViewById(R.id.radioGroup);
         foodImg = findViewById(R.id.foodImg);
+        orderBtn = findViewById(R.id.orderBtn);
+        chk = findViewById(R.id.termsCheckbox);
+
         findViewById(R.id.radio_10).setOnClickListener(this);
         findViewById(R.id.radio_15).setOnClickListener(this);
         findViewById(R.id.radio_20).setOnClickListener(this);
@@ -76,6 +82,17 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 //                        Toast.LENGTH_SHORT).show();
             }
         });
+
+        orderBtn.setOnClickListener(
+                v->{
+                    if(chk.isChecked()){
+                        Toast.makeText(MainActivity.this, "Order has been placed successfully!",Toast.LENGTH_SHORT).show();
+                    }else{
+                        Toast.makeText(MainActivity.this, "Please check the terms and conditions!",Toast.LENGTH_SHORT).show();
+                    }
+
+                }
+        );
     }
 
     @Override

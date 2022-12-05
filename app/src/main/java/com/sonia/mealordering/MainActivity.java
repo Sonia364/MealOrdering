@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.SeekBar;
@@ -23,6 +24,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     double tip = 0;
     RadioGroup radio_group;
     RadioButton  radioBtn;
+    ImageView foodImg;
 
     int quantity = 1;
     final int TAX = 13;
@@ -37,6 +39,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         spinner = findViewById(R.id.mealsList);
         seekbar = findViewById(R.id.quantitySeekbar);
         radio_group = findViewById(R.id.radioGroup);
+        foodImg = findViewById(R.id.foodImg);
         findViewById(R.id.radio_10).setOnClickListener(this);
         findViewById(R.id.radio_15).setOnClickListener(this);
         findViewById(R.id.radio_20).setOnClickListener(this);
@@ -82,33 +85,43 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         switch (selectedItem){
             case "Subway":
                 priceVal = "10";
+                foodImg.setImageResource(R.drawable.subway);
                 break;
             case "Taco":
                 priceVal = "20";
+                foodImg.setImageResource(R.drawable.taco);
                 break;
             case "Banana":
                 priceVal = "10";
+                foodImg.setImageResource(R.drawable.banana);
                 break;
             case "Burger":
                 priceVal = "25";
+                foodImg.setImageResource(R.drawable.burger);
                 break;
             case "Pizza":
                 priceVal = "15";
+                foodImg.setImageResource(R.drawable.pizza);
                 break;
             case "Orange":
                 priceVal = "15";
+                foodImg.setImageResource(R.drawable.orange);
                 break;
             case "Fries":
                 priceVal = "35";
+                foodImg.setImageResource(R.drawable.fries);
                 break;
             case "Apple":
                 priceVal = "30";
+                foodImg.setImageResource(R.drawable.apple);
                 break;
             case "Papaya":
                 priceVal = "25";
+                foodImg.setImageResource(R.drawable.papaya);
                 break;
             case "Lemon":
                 priceVal = "15";
+                foodImg.setImageResource(R.drawable.lemon);
                 break;
 
         }
